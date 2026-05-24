@@ -19,3 +19,10 @@ while True:
         new_task = input("Enter the new task: ")
         tasks.append(new_task)
         print(f"Task '{new_task}' added successfully.")
+    elif choice == "4":
+        if not tasks:
+            print("No tasks to delete.")
+        else:
+            task_number = int(input("Enter the task number to delete: "))
+            removed = tasks.pop(task_number - 1)
+            print(f"Task '{removed}' deleted successfully.")
