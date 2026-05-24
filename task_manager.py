@@ -5,7 +5,14 @@ while True:
     print("2. Exit  ")
     print("3. Add Task")
     choice = input("Enter your choice: ")
-    if choice == "2":
+    if choice == "1":
+        if not tasks:
+            print("No tasks available.")
+        else:
+            print("\nYour Tasks:")
+            for index, task in enumerate(tasks, 1):
+                print(f"{index}. {task}")
+    elif choice == "2":
         print("Exiting Task Manager. Goodbye!")
         break
     elif choice == "3":
