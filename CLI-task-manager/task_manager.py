@@ -16,8 +16,8 @@ while True:
         print("Exiting Task Manager. Goodbye!")
         break
     elif choice == "3":
-        new_task = input("Enter the new task: ")
-        tasks.append(new_task)
+        new_task = input("Enter the task description: ")
+        tasks.append({"title":new_task, "completed":False})
         print(f"Task '{new_task}' added successfully.")
     elif choice == "4":
         if not tasks:
