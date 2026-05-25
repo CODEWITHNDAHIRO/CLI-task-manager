@@ -11,18 +11,20 @@ while True:
         else:
             print("\nYour Tasks:")
             for index, task in enumerate(tasks, 1):
-                print(f"{index}. {task}")
+                status = "[x]" if task["completed"] else "[ ]"
+                print(f"{index}. {status} {task['title']}")
     elif choice == "2":
         print("Exiting Task Manager. Goodbye!")
         break
     elif choice == "3":
-        new_task = input("Enter the new task: ")
-        tasks.append(new_task)
+        new_task = input("Enter the task description: ")
+        tasks.append({"title":new_task, "completed":False})
         print(f"Task '{new_task}' added successfully.")
     elif choice == "4":
         if not tasks:
             print("No tasks to delete.")
         else:
             task_number = int(input("Enter the task number to delete: "))
+        
             removed = tasks.pop(task_number - 1)
-            print(f"Task '{removed}' deleted successfully.")
+            print(f"Deleted task: {removed['title']}")
