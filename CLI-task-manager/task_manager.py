@@ -30,3 +30,10 @@ while True:
         
             removed = tasks.pop(task_number - 1)
             print(f"Deleted task: {removed['title']}")
+    elif choice == "5":
+        if not tasks:
+            print("No tasks to mark as completed.")
+        else:
+            task_number = int(input("Enter the task number to mark as completed: "))
+            tasks[task_number - 1]["completed"] = True
+            print(f"Marked task '{tasks[task_number - 1]['title']}' as completed.")
