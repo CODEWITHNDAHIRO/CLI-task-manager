@@ -4,6 +4,8 @@ while True:
     print("1. View Tasks")
     print("2. Exit  ")
     print("3. Add Task")
+    print("4. Delete Task")
+    print("5. Mark Task as Completed")
     choice = input("Enter your choice: ")
     if choice == "1":
         if not tasks:
