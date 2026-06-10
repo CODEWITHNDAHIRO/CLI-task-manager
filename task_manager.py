@@ -1,3 +1,17 @@
+import json
+import os
+TASKS_FILE = "tasks.json"
+def load_tasks():
+    if os.path.exists(TASKS_FILE):
+        with open(TASKS_FILE, "r") as f:
+            return json.load(f)
+    return []
+def save_tasks(tasks):
+    with open(TASKS_FILE, "W") as f:
+        json.dump(tasks, f , indent=2)
+tasks = load_tasks() # this replaces tasks =[]
+
+
 tasks = []
 while True:
     print("\n--- Task Manager ---")
