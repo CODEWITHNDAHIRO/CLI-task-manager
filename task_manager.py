@@ -51,3 +51,12 @@ while True:
             task_number = int(input("Enter the task number to mark as completed: "))
             tasks[task_number - 1]["completed"] = True
             print(f"Marked task '{tasks[task_number - 1]['title']}' as completed.")
+            choice = input("Enter your choice: ")
+    if choice == "1":
+        if not tasks:
+            print("No tasks available.")
+        # ... your existing view tasks logic ...
+        
+    elif choice == "2":
+        print("Goodbye! Thanks for using Task Manager.")
+        break  # This breaks the while True loop and exits the script
