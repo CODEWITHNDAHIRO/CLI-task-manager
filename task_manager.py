@@ -1,5 +1,6 @@
 import json
 import os
+VERSION = "1.0.0"
 TASKS_FILE = "tasks.json"
 def load_tasks():
     if os.path.exists(TASKS_FILE):
@@ -20,6 +21,7 @@ while True:
     print("3. Add Task")
     print("4. Delete Task")
     print("5. Mark Task as Completed")
+    print("6.version")
     choice = input("Enter your choice: ")
     if choice == "1":
         if not tasks:
@@ -52,6 +54,8 @@ while True:
             tasks[task_number - 1]["completed"] = True
             print(f"Marked task '{tasks[task_number - 1]['title']}' as completed.")
             choice = input("Enter your choice: ")
+    elif choice == "6":
+             print(f"Task Manager v{VERSION}")
     if choice == "1":
         if not tasks:
             print("No tasks available.")
