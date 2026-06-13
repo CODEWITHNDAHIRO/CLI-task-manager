@@ -22,6 +22,7 @@ while True:
     print("4. Delete Task")
     print("5. Mark Task as Completed")
     print("6.version")
+    print("7. Help ")
     choice = input("Enter your choice: ")
     if choice == "1":
         if not tasks:
@@ -56,6 +57,8 @@ while True:
             choice = input("Enter your choice: ")
     elif choice == "6":
              print(f"Task Manager v{VERSION}")
+    elif choice == "7":
+            print("commands: 1-View | 2-Exit | 3-Add | 4-Delete | 5-complete | 6-Version")
     if choice == "1":
         if not tasks:
             print("No tasks available.")
